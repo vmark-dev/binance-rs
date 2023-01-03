@@ -623,7 +623,6 @@ impl FuturesAccount {
         }
 
         let request = build_signed_request(parameters, self.recv_window)?;
-        println!("{}", request);
         self.client
             .get_signed(API::Futures(Futures::Income), Some(request))
     }
